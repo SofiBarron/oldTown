@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap" rel="stylesheet">
+
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+<!--Toastr - Styles-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+<!--Styles-->
+<link rel="stylesheet" href="style/css/style.css">
+
+<title>Old Town | Books and More | Shop</title>
+</head>
+
+<body class="mainBgColor">
+    <!--Header - Navbar-->
+    <header class="menuStyle">
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <a class="navbar-brand" href="catalogue.html">
+                <img src="images/old town.png" alt="Old Town Logo" class="webLogo">
+            </a>
+            <div class="flex-grow-1 d-flex">
+                <form class="form-inline flex-nowrap mx-0 mx-lg-auto rounded p-1">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search for books"
+                        aria-label="Search" id='js-searchInput'>
+                    <button class="btn btn-outline-success my-2 my-sm-0 searchBarButton" id="js-searchButton">Search</button>
+                </form>
+            </div>
+            <div class="justify-content-between" id="navbarSupportedContent">
+                        <a type="button" class="cart" data-toggle="modal" data-target="#cartModal" id="cartButton">
+                            <i class="fas fa-shopping-cart fa-2x"></i>
+                            <span id="cartCounter">0</span>
+                        </a>
+            </div>
+        </nav>
+    </header>
+
+    <!--Cart Modal-->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Your Shopping Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div id="modalContainer"></div>
+                <div class="cartModalDetails">
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row justify-content-around">
+                                <h4 class="col-md-4">Title</h4>
+                                <h4 class="col-md-4">Author</h4>
+                                <h4 class="col-md-3">Price</h4>
+                                <h4 class="col-md-1 ml-auto"></h4>
+                            </div>
+                            <div id="selectedItems"></div>
+                            <div class="row align-items-end">
+                                <h4 class="col-md-3 ml-auto">Total:</h4>
+                                <h3 id="totalPrice">$0</h3>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="buyButton">Buy</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!--Catalogue Intro-->
+        <section class="jumbotron-fluid container-fluid">
+            <div class="jumbotron jumbotron-fluid jumbotronImg" style="background-image: url(images/bannerComics.jpg);">
+                <div class="container">
+                    <h1 class="display-4 introTitle ">Shop</h1>
+                    <p class="lead introParagraph">Find your books here!</p>
+                </div>
+            </div>
+        </section>
+
+        <!--New In Selection-->
+        <section class="container newSection" id="newIn">
+                <h2 class="sectionName" id="newInSec">New In!</h2>
+                <div>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="images/beastBoyRavenCar.jpg" alt="Beast Boy and Raven">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Beast Boy Loves Raven</h5>
+                                <p>Kami Garcia and Gabriel Piccolo are back with a new Teen Titan novel.</p>
+                            </div>
+                        </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/hailMaryCar.png" alt="Project Hail Mary">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Project Hail Mary</h5>
+                    <p>Andy Weir returns with a new sci-fi already on its way to adaptation.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/sandman.jpg" alt="The Sandman">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>The Sandman</h5>
+                    <p>Back in stock! Get ready for the Netflix show with the first volume of this incredible graphic novel.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </section>
+
+        <!-- Catalogue Grid -->
+        <section class="container catalogueContainer" id='container'>
+            <h2 class="sectionName">Catalogue</h2>
+            <div class="container__grid" id="js-gridContainer">
+            </div>
+
+        <!--Return to Top-->
+        <div class="arrowContainer" id="toTop"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footerPosition">
+        <div class="footerStyle">
+            <div class="socialLinks">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x twitter"></i>
+                </a>
+                <a href="https://discord.com" target="_blank"><i class="fab fa-discord fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/fa21025153.js" crossorigin="anonymous"></script>
+
+    <!--JQuery + Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+    <!--Toaster-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <!--JS Links -->
+    <script src="js/main.js"></script>
+    <script src='js/products.js'></script>
+    <script src="js/cards.js"></script>
+    <script src='js/cart.js'></script>
+</body>
+
+</html>

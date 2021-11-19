@@ -1,0 +1,55 @@
+@import '../abstracts/variables';
+
+.introTitle {
+    font-family: $fontColorHighlight;
+    font-weight: bolder;
+    color: $fontColorSubtle;
+    margin-bottom: .5rem;
+}
+
+.introParagraph {
+    font-family: $fontOthers;
+    font-weight: bolder;
+    color: $fontColorGrey;
+    font-size: 20px;
+    margin-bottom: .5rem;
+    display: inline;
+    background-color: $fontColorSubtle;
+}
+
+.jumbotronImg {
+    background-size: cover;
+    height: 100%;
+}
+
+.catalogueContainer {
+    margin-bottom: 150px;
+}
+
+.sectionName {
+    font-family: $fontTitles;
+    font-size: 30px;
+    font-weight: bolder;
+    color: $fontColorSubtle;
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px;
+}
+
+.newSection {
+    margin-bottom: 20px;
+}
+
+.arrowContainer {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.arrowStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

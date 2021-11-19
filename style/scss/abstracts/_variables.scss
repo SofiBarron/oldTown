@@ -1,0 +1,23 @@
+/* Font Families */
+$fontTitles: 'Raleway', sans-serif;
+$fontOthers: 'Lato', sans-serif;
+
+/* Font Colour Variations */
+$colorFontList: #272727, #9A1750, #EE4C7C, #1f2833, #5D001E;
+$fontColorText: nth($colorFontList, 1);
+$fontColorHighlight: nth($colorFontList, 2);
+$fontColorSubtle: nth($colorFontList, 3);
+$fontColorGrey: nth($colorFontList, 4);
+$fontColorDark: nth($colorFontList, 5);
+
+/* Box - Background Color */
+$box-bg-color: rgba(24,36,45,.71);
+$box-bg-colorb: rgba(24, 36, 45, 0.5);
+
+/* Box - Background */
+$box-bg:  rgba(73, 90, 88, 0.77);
+
+/* Borders Color Variations */
+$borderColorVar: #9A1750, #1f2833;
+$borderColorGreen: nth($borderColorVar, 1);
+$borderColorGrey: nth($borderColorVar, 2);

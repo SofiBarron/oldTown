@@ -1,0 +1,16 @@
+@import '../abstracts/variables';
+
+.carousel-item {
+    z-index: 0;
+}
+
+.carousel-indicators {
+    z-index: 1;
+}
+
+.carousel-caption {
+    box-shadow: 10px 5px 5px black;
+    background-color: $box-bg;
+    margin: 18px;
+    padding: 15px;
+}

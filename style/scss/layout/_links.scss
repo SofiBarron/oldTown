@@ -1,0 +1,21 @@
+@import '../abstracts/variables';
+
+/* Links Style */
+a {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    line-height: normal;
+    color: $fontColorSubtle;
+    text-decoration: solid;
+    font-style: normal;
+
+    &:hover {
+        cursor: pointer;
+        color: $fontColorHighlight;
+    }
+
+    &:active {
+        color: $fontColorDark;
+        font-weight: bold;
+    }
+}

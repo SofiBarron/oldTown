@@ -1,0 +1,32 @@
+@import '../abstracts/variables';
+
+.footerPosition {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $fontColorGrey;
+    z-index: 2;
+}
+
+.footerStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* Social Links */
+.socialLinks {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.twitter {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0 5px;
+}

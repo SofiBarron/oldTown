@@ -1,0 +1,27 @@
+@import '../abstracts/variables';
+
+/* Header - Navbar Responsive Logo */
+.webLogo {
+    width: auto;
+    height: 90px;
+}
+
+.searchBarButton {
+    background: $fontColorHighlight;
+    border-color: $fontColorGrey;
+    color: $fontColorText;
+
+    &:hover {
+        background: $fontColorSubtle;
+        border-color: $fontColorHighlight;
+    }
+}
+
+.cart {
+    border-color: $fontColorGrey;
+    color: $fontColorHighlight;
+
+    &:hover {
+        color: $fontColorSubtle;
+    }
+}
